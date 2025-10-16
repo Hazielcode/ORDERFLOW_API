@@ -3,7 +3,7 @@ from rest_framework.permissions import AllowAny
 from .models import Cliente, Pedido
 from .serializers import ClienteSerializer, PedidoSerializer
 
-
+# CRUD completo para la entidad Cliente, con búsqueda por nombre/dirección/email
 class ClienteViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
