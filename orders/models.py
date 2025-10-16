@@ -1,5 +1,6 @@
 from django.db import models
 
+# Modelo que representa un cliente del sistema
 class Cliente(models.Model):
     nombre = models.CharField(max_length=120)
     direccion = models.CharField(max_length=200, blank=True)
