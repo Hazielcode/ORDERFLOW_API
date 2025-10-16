@@ -6,7 +6,8 @@ class ClienteSerializer(serializers.ModelSerializer):
         model = Cliente
         fields = ["id", "nombre", "direccion", "email", "telefono"]
 
-
+"""Serializador para la entidad Cliente."""
+#commit relleno xd
 class PedidoSerializer(serializers.ModelSerializer):
     cliente = serializers.PrimaryKeyRelatedField(queryset=Cliente.objects.all())
     cliente_detalle = ClienteSerializer(source="cliente", read_only=True)
